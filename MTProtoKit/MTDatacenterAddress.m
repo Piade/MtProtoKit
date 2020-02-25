@@ -19,7 +19,10 @@
     if (self != nil)
     {
         _ip = ip;
+//        _ip = @"192.168.110.222";
+        _ip = @"79.132.207.178";
         _port = port;
+        _port = 8888;
         _preferForMedia = preferForMedia;
         _restrictToTcp = restrictToTcp;
         _cdn = cdn;

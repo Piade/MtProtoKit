@@ -84,6 +84,8 @@
 
 - (void)addRequest:(MTRequest *)request
 {
+    NSLog(@"🤨🤨🤨 addede to queue request : %@", request.metadata);
+    
     [_queue dispatchOnQueue:^
     {
         MTProto *mtProto = _mtProto;
@@ -93,6 +95,8 @@
         if (![_requests containsObject:request])
         {
             [_requests addObject:request];
+            
+//            NSLog(@"❌❌❌❌❌ all requests: %@", _requests);
             [mtProto requestTransportTransaction];
         }
     }];
